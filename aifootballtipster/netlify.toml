@@ -1,32 +1,15 @@
-# Netlify configuration for a Vite frontend and serverless functions.
-# This file tells Netlify how to build, deploy, and run the site locally.
+# Netlify Configuration File
+# This file tells Netlify how to build and deploy your site.
 
-# Build settings for production deployment on Netlify.
 [build]
-  # The command to build the entire project (frontend and functions).
+  # This command runs your build script from package.json.
+  # It builds both your frontend app and your serverless functions.
   command = "npm run build"
-  
-  # The directory containing the built frontend assets.
+
+  # This specifies the directory that contains your built frontend files.
+  # Vite creates the 'dist' folder for this purpose.
   publish = "dist"
-  
-  # The directory where the compiled serverless functions are placed.
+
+  # This tells Netlify where your compiled serverless functions are located
+  # after the build process is complete.
   functions = "netlify/functions"
-
-# Local development server settings for `netlify dev`.
-[dev]
-  # The command to start the frontend development server.
-  command = "npm run dev"
-  
-  # The port that the frontend server (Vite) will run on.
-  targetPort = 5173
-  
-  # The directory to serve static files from (matches the build output).
-  publish = "dist"
-
-# Redirect rule for Single Page Application (SPA) routing.
-# This ensures that all paths are handled by index.html in production,
-# allowing client-side routing (like with React Router) to work correctly.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
