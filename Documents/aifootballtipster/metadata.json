@@ -1,0 +1,5 @@
+{
+  "name": "aifootballtipster",
+  "description": "An AI-powered application that provides up-to-date soccer match predictions and analysis using Google Search grounding. It features a visual 'Best Bets' hub with sliders, pie charts, and probabilities for various match outcomes.",
+  "requestFramePermissions": []
+}
