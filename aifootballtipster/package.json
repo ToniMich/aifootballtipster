@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "netlify dev",
-    "build": "vite build && npm run build:functions",
+    "dev": "vite",
+    "build": "npx vite build && npm run build:functions",
     "build:functions": "cd functions && tsc",
-    "preview": "vite preview",
+    "preview": "npx vite preview",
     "postinstall": "npm run build:functions"
   },
   "dependencies": {
