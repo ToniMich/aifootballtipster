@@ -1,0 +1,19 @@
+# Netlify Configuration File
+# This file configures the build settings and redirects for the Netlify platform.
+
+[build]
+  # Command to build the frontend application and serverless functions.
+  command = "npm run build"
+  
+  # Directory where the compiled serverless functions are located.
+  functions = "netlify/functions"
+  
+  # The directory that contains the built frontend assets to be deployed.
+  publish = "dist"
+
+# Redirect rule for Single Page Applications (SPAs) like React.
+# This ensures that all paths are routed to index.html for client-side routing.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,0 +1,31 @@
+{
+  "name": "aifootballtipster",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "vite build && npm run build:functions",
+    "build:functions": "cd functions && tsc",
+    "preview": "vite preview",
+    "postinstall": "npm run build:functions"
+  },
+  "dependencies": {
+    "@google/genai": "^1.28.0",
+    "@netlify/functions": "^2.7.0",
+    "firebase-admin": "^13.5.0",
+    "marked": "^16.4.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "netlify-cli": "^17.23.5",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  }
+}
